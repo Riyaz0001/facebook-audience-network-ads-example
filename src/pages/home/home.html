@@ -1,14 +1,53 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-header id="headerHeight">
+    <ion-navbar>
+      <ion-title>Facebook Ads</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+    <button ion-button block (click)="showFacebookBannerAds()">
+      Show Banner Ads
+    </button>
+    <button ion-button block (click)="showFacebookInterstitialAds()">
+        Show Interstitial Ads
+    </button>
+    
+    <button ion-button block (click)="showFacebookNativeAds()">
+        Show Native Ads
+    </button>
+  
+    <span id="native">
+        <ion-card>
+          <img src="" id="nativeAdCover" style="max-width:100%; height: auto;">
+            <ion-card-content text-wrap>
+              
+              <ion-item>
+                <ion-avatar item-left>
+                  <img  src="" id="nativeAdIcon"/>
+                </ion-avatar>
+  
+                <h2 id="nativeAdTitle"></h2>
+                <p id="nativeAdBody"></p>
+              </ion-item>
+  
+              <ion-row>
+  
+                <ion-col center text-left width-70 small style="font-size: x-small;">
+                  <span id="nativeAdSocialContext" small></span>
+                </ion-col>
+  
+                <ion-col center text-align width-30>
+                  <button ion-button small color="primary" id="nativeAdBtn"></button>
+                </ion-col>
+  
+              </ion-row>
+  
+            </ion-card-content>
+        </ion-card>
+    </span>
+    
+  
+  </ion-content>
+  
